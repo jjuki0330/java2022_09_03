@@ -1,0 +1,396 @@
+/* main */
+.main{
+    width: 100%;
+    height: 920px;
+    text-align: center;
+   /*  border: 1px solid black; */
+}
+.maincontainer{
+    width: 1000px;
+    height: 600px;
+    /* border: 1px solid black; */
+    margin:120px auto;
+}
+.maincontainer>.img{
+    float: left;
+    width: 300px;
+    height: 100%;
+
+}
+.img>img{
+    width: 300px;
+    height: 320px;
+    margin-top: 120px;
+}
+.maincontent{
+    float: right;
+    width: 696px;
+    height: 100%;
+}
+.maincontent>h1{
+    margin-top: 150px;
+    font-size: 50px;
+    width: 650px;
+}
+.maincontent>p{
+    margin-top: 20px;
+    font-size: 20px;
+     width: 650px;
+    font-weight: bold;
+}
+
+/* about me */
+.aboutme,.skill,.project,.contact{
+    width: 100%;
+    height: 920px;
+    /* border: 1px solid black; */
+}
+.titleContainer{
+    margin-top: 150px;
+    /* border: 1px solid black; */
+    width: 400px;
+    height: 80px;
+}
+.tFirst{
+    border-bottom: 9px solid rgb(4,187 ,237);
+}
+.tSecond{
+    float: right;
+    margin-top: 100px;
+    /* border: 1px solid black; */
+    width: 400px;
+    height: 80px;
+    border-bottom: 9px solid rgb(254,224 ,124);
+}
+.tThird{
+    border-bottom: 9px solid rgb(9,136 ,19);
+}
+.tSecond>.title{
+    float: left;
+    margin-top: 13px;
+    margin-left: 5px;
+    font-size: 50px;
+    font-weight: bold;
+}
+.title{
+    float: right;
+    margin-top: 13px;
+    margin-right: 5px;
+    font-size: 50px;
+    font-weight: bold;
+    /* border: 1px solid black; */
+}
+.contentContainer{
+    width: 1000px;
+    height: 500px;
+    margin: 50px auto;
+    /* border: 1px solid black; */
+}
+.contentimage{
+    float: left;
+    width: 350px;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+.content{
+    float: right;
+    width: 646px;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+.text{
+    margin-top: 20px;
+    margin-left: 80px;
+    width:86%;
+    height: 90%;
+    /* border: 1px solid black; */
+}
+.job{
+    margin-top: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(4,187 ,237);
+}
+.intro{
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.myinfo>ul>li{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    list-style: none;
+}
+.myinfo>ul{
+    padding-left: 5px;
+    margin-top: 40px;
+}
+.contentimage>img{
+    width: 350px;
+    height: 420px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+/* skill */
+.skillList{
+    width: 90%;
+    height: 400px;
+    padding: 0 auto;
+    margin: 0 auto;
+    margin-top: 300px;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.list>div{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.listTitle1{
+    background-image: url("/_fileUpload/java.png");
+}
+.listTitle2{
+    background-image: url("/_fileUpload/certificate.png");
+    background-position: center;
+}
+.listTitle3, #listTitle3{
+    background-image: url("/_fileUpload/덩실덩실.gif");
+    background-repeat: no-repeat;
+}
+
+
+.listCover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+    transition: all ease 0.3s;     
+    
+}
+.list>div>span{
+    color: rgb(248,183,17);
+    font-weight: 700;
+    background-color: transparent;
+    font-size: 30px;
+    z-index: 2;
+    transition: all ease 0.3s;
+    
+}
+
+.list>div:hover .listCover {
+    background-color: white;
+    opacity: 0.5;
+}
+.list>div:hover span {
+    color: black;
+    font-weight: 800;
+}
+
+/* skill 팝업창 */
+.skillOne{
+    background-color: rgba(0, 0, 0, 0.496);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    padding-top: 300px;
+    display: none;
+    z-index: 1000;
+}
+.specContainer{
+    width: 600px;
+    height: 450px;
+    /* border: 1px solid black; */
+    border-radius: 10px;    
+    background-color:rgb(248,183,17) ;
+}
+.skillImg{
+    width: 97.5%;
+    height: 250px;
+    margin:6px auto ;
+    overflow: hidden;
+/*     background-image: url("/_fileUpload/java.png"); */
+    background-size: cover;
+    background-position: left;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.skillSpec{
+    width: 94%;
+    height: 165px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: transparent;
+
+}
+ .skillTitle, .skillTerm, .skillAdd, .skillInfo{
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.skillTitle{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.skillAdd{
+    margin-bottom: 10px;
+}
+
+.skillInfo{
+    height: 80px;
+    overflow: auto;
+}
+.skillInfo::-webkit-scrollbar{
+    display: none;
+}
+.goback{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: 3px solid rgb(248,183,17);
+    background-color: transparent;
+    text-align: center;
+    color: rgb(248,183,17);
+    font-weight: 700;
+    font-size: 20px;
+    z-index: 1000;
+    margin-left: 10px;
+    
+}
+
+
+
+/* project */
+.projectList{
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-top: 100px;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+#listTitle1{
+    background-image: url("/_fileUpload/musicplayer.png");
+    background-position: center;
+}
+#listTitle2{
+    background-image: url("/_fileUpload/kofiniimage.png");
+    background-position: center;
+}
+.skillImg:nth-child(3){
+	background-image: url("/image/musicplayer.png");
+}
+.skillImg:nth-child(4){
+	background-image: url("/image/kofiniimage.png");
+}
+.skillImg:nth-child(5){
+	background-image: url("/image/덩실덩실.gif");
+}
+
+
+/* CONTACT */
+.contact{
+    text-align: center;
+}
+
+.contactTitle{
+    width: 300px;
+    height: max-content;
+    /* border: 1px solid black; */
+    color: black;
+    font-size: 40px;
+    font-weight: 700;  
+    margin: 0 auto;
+    margin-top: 200px;  
+}
+
+.contactContainer{
+    width: 500px;
+    height: 500px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.contactwayList{
+    height: 300px;
+    /* border: 1px solid black; */
+    padding: 0;
+}
+.contactwayList>li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.657);
+    border-radius: 7px;
+    margin-bottom: 15px;
+    height: 50px;
+    padding: 0 10px;
+}
+.contactwayList>li>.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  background-color: transparent;
+  color: white;
+  font-size: 35px;
+}
+.contactway{
+    margin-left: 10px;
+    background-color: transparent;
+    color: white;
+}
+.contactSNS{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    /* border: 1px solid black; */
+    margin: 0;
+    padding: 0;
+}
+.contactSNS>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+    float: left;
+    list-style: none;
+}
+.contactSNS>li>img{
+    width: 30px;
+    height: 30px;
+
+}
+
+
+
+

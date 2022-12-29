@@ -1,0 +1,115 @@
+.content{
+    float: right;
+    width: 430px;
+    height: 430px;
+    background-color: white;
+    padding: 10px ;
+    
+}
+.title{
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: 700;
+    background-color: transparent;
+}
+.subcontent{
+    margin-top: 25px;
+    width: 100%;
+    height: 330px;
+    /* border: 1px solid black; */
+    background-color: white
+}
+.email, .password,.passwordcheck,.nickname{
+    font-size: 20px;
+    width: 100%;
+    background-color: transparent;
+    height: 40px;
+    /* border: 1px solid black; */
+    padding-top: 7px;
+
+}
+.email>.name{
+    margin-left: 30px;
+    background-color: transparent;
+}
+.password>.name, .nickname>.name{
+    margin-left: 15px;
+    background-color: transparent;
+}
+
+.name{
+    width: max-content;
+    margin-right: 20px;
+    float: left;
+    /* border: 1px solid black; */
+    background-color: transparent;
+}
+input{
+    width: 260px;
+    height: 25px;
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 5px;
+    background-color: white;
+    border: 1.5px solid rgb(164, 161, 161);
+}
+.passwordcheck>input{
+    float: left;
+    margin-right: 0;
+    margin-left: 129px;
+}
+#ok{
+    float: right;
+    font-weight: 700;
+    margin-right: 10px;
+    width: max-content;
+    height: max-content;
+    background-color: transparent;
+    color: red;
+}
+.SNS{
+    width: 100%;
+    height: 70px;
+    /* border: 1px solid black; */
+    background-color: transparent;
+    text-align: center;
+}
+.SNS>button{
+    width: 300px;
+    height: 30px;
+    margin: 5px auto;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.SNS>button:nth-child(1){
+    border: transparent;
+    color: rgb(114, 68, 25);
+    font-size: 16px;
+}
+.SNS>button:nth-child(2){
+    background-color: rgb(23, 115, 234);
+    border: transparent;
+    color: white;
+}
+.submitcancel{
+    background-color: transparent;
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.btn{
+    width: 120px;
+    height: 30px;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+

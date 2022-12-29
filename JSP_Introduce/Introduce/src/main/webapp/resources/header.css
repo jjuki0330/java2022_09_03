@@ -1,0 +1,80 @@
+*{
+    background-color: rgb(248,183,17);
+}
+/* header */
+header{
+    position: fixed;
+    top:5px;
+    z-index: 4;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+   /*  border: 1px solid black; */
+}
+header>ul{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+header>ul>li{
+    float: left;
+    list-style: none;
+    margin: 0 10px;
+    background-color: transparent;
+}
+.nav{
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    transition: all ease 0.2s;
+}
+.nav:hover{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.one{
+    background-color: rgb(249,46 ,40);
+}
+.two{
+    background-color: rgb(4,187 ,237);
+}
+.three{
+    background-color: rgb(254,224 ,124);
+}
+.four{
+    background-color: rgb(9,136 ,19);
+}
+
+/* menu bar */
+.menubar{
+    position: fixed;
+    z-index: 4;
+    top: 30px;
+    right:0%;
+   /*  border:1px solid black; */
+    width: 130px;
+    height: 230px;
+    background-color: transparent;
+}
+.menubar>a>button{
+    float: right;
+    z-index: 4;
+    width: 100%;
+    height: 60px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    transition: all ease 0.3s;
+}
+.menubar>a>button:hover{
+    width: 110%;
+}
+
+
+

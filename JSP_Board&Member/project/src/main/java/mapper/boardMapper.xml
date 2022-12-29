@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="BoardMapper">
+<!-- SQL 구문 생성 -->
+<insert id="insert" parameterType="bvo">
+insert into board(title, writer, content, image_file)
+values(#{title}, #{writer},#{content},#{image_file})
+</insert>
+<select id="list" resultType="bvo">
+select bNo, title, writer, reg_date, read_count from board order by bNo desc
+</select>
+<select id="detail" parameterType="int" resultType="bvo">
+select * from board where bNo=#{bNo}
+</select>
+<update id="addcount" parameterType="int">
+update board set read_count=read_count+1 where bNo=#{bNo}
+</update>
+<update id="update" parameterType="bvo">
+update board set title=#{title}, content=#{content},
+reg_date = now(), image_file= #{image_file } 
+where bNo=#{bNo}
+</update>
+<delete id="delete" parameterType="int">
+delete from board where bNo=#{bNo}
+</delete>
+<select id="cnt" resultType="int">
+ select count(bNo) from board
+</select>
+<select id="pagingList" parameterType="pgvo" resultType="bvo">
+ select bNo, title, writer, reg_date, read_count, image_file
+ from board order by bNo desc limit #{pageStart}, #{qty}
+</select>
+<select id="emailList" parameterType="string" resultType="bvo">
+ select bNo, title, writer, reg_date, read_count, image_file
+ from board join member2
+ on board.writer = member2.email
+ where email=#{writer}
+</select>
+<select id="getFileName" parameterType="int" resultType="String">
+select image_file from board where bNo = #{bNo}
+</select>
+</mapper> 

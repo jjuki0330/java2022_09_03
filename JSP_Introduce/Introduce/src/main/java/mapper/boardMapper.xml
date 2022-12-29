@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="BoardMapper">
+<!-- SQL 구문 생성 -->
+<insert id="insert" parameterType="bvo">
+	insert into pboard(writer, content, image_file)
+	values(#{writer}, #{content}, #{image_file})
+</insert>
+<select id="getPageCnt" resultType="int">
+	select count(bNo) from pboard
+</select>
+<select id="getList" resultType="bvo">
+	select bNo, writer, content, reg_at, content, image_file from pboard 
+	order by reg_at desc limit #{pageStart}, #{qty}
+</select>
+<select id="getDetail" parameterType="int" resultType="bvo">
+	select * from pboard where bNo=#{bNo}
+</select>
+<update id="edit" parameterType="bvo">
+	update pboard set 
+	content=#{content}, image_file=#{image_file}, reg_at=now()
+	where bNo=#{bNo}
+</update>
+<select id="getFileName" parameterType="int" resultType="String">
+	select image_file from pboard where bNo=#{bNo}
+</select>
+<delete id="delete" parameterType="int">
+	delete from pboard where bNo=#{bNo}
+</delete>
+</mapper>
